@@ -14,7 +14,7 @@ export default function RatingStamp({ rating, size = 'md' }) {
       <div className={`rating-stamp ${dims}`} title={`${rating.toFixed(1)} / 5`}>
         {rating.toFixed(1)}
       </div>
-      <span className="hidden font-mono text-xs uppercase tracking-wide text-ink/60 sm:inline">
+      <span className="hidden font-mono text-xs uppercase tracking-wide text-ink/80 sm:inline">
         {ratingLabel(rating)}
       </span>
     </div>
