@@ -47,7 +47,7 @@ export default function HotelDetail() {
           action={
             <Link
               to="/"
-              className="rounded-full bg-ink px-5 py-2 font-mono text-xs uppercase tracking-widest text-paper transition hover:bg-pine-600"
+              className="rounded-full bg-ink px-5 py-2 font-mono text-xs uppercase tracking-widest text-paper transition hover:bg-primary-600"
             >
               Back to all stays
             </Link>
@@ -62,7 +62,7 @@ export default function HotelDetail() {
       <button
         type="button"
         onClick={() => navigate(-1)}
-        className="mb-6 font-mono text-xs uppercase tracking-widest text-ink/50 hover:text-pine-500"
+        className="mb-6 font-mono text-xs uppercase tracking-widest text-ink/50 hover:text-primary-500"
       >
         &larr; Back
       </button>
@@ -86,7 +86,7 @@ export default function HotelDetail() {
                   type="button"
                   onClick={() => setActivePhoto(i)}
                   className={`h-16 w-24 shrink-0 overflow-hidden rounded-lg border-2 transition ${
-                    i === activePhoto ? 'border-pine-500' : 'border-transparent opacity-70'
+                    i === activePhoto ? 'border-primary-500' : 'border-transparent opacity-70'
                   }`}
                 >
                   <img src={src} alt="" className="h-full w-full object-cover" />
@@ -96,7 +96,7 @@ export default function HotelDetail() {
           )}
 
           <div className="mt-8">
-            <p className="font-mono text-xs uppercase tracking-widest text-pine-600">
+            <p className="font-mono text-xs uppercase tracking-widest text-primary-600">
               {hotel.location}
             </p>
             <h1 className="mt-2 font-display text-3xl font-semibold text-ink sm:text-4xl">
@@ -109,7 +109,7 @@ export default function HotelDetail() {
           </div>
         </div>
 
-        <aside className="ticket-notch h-fit rounded-2xl bg-white p-6 shadow-ticket">
+        <aside className="ticket-notch h-fit rounded-2xl bg-white p-6 shadow-xl ring-1 ring-ink/5 transition-all">
           <p className="font-mono text-xs uppercase tracking-widest text-ink/50">
             Rate per night
           </p>
@@ -138,7 +138,7 @@ export default function HotelDetail() {
             type="button"
             onClick={() => setBooked(true)}
             disabled={booked}
-            className="mt-6 w-full rounded-full bg-pine-500 px-5 py-3 font-mono text-xs uppercase tracking-widest text-paper transition hover:bg-pine-600 disabled:bg-pine-200"
+            className="mt-6 w-full rounded-full bg-primary-500 px-5 py-3 font-mono text-xs uppercase tracking-widest text-paper transition hover:bg-primary-600 disabled:bg-primary-200"
           >
             {booked ? 'Reserved ✓' : 'Reserve this stay'}
           </button>

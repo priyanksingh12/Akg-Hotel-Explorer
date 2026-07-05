@@ -22,7 +22,7 @@ export default function SearchFilters({ filters, onChange, locations }) {
             value={query}
             onChange={(e) => update({ query: e.target.value })}
             placeholder="Hotel name or city"
-            className="rounded-lg border border-ink/15 bg-paper px-3 py-2 text-sm text-ink placeholder:text-ink/40 focus:border-pine-500 focus:outline-none"
+            className="rounded-lg border border-ink/15 bg-paper px-3 py-2 text-sm text-ink placeholder:text-ink/40 focus:border-primary-500 focus:outline-none"
           />
         </label>
 
@@ -33,7 +33,7 @@ export default function SearchFilters({ filters, onChange, locations }) {
           <select
             value={location}
             onChange={(e) => update({ location: e.target.value })}
-            className="rounded-lg border border-ink/15 bg-paper px-3 py-2 text-sm text-ink focus:border-pine-500 focus:outline-none"
+            className="rounded-lg border border-ink/15 bg-paper px-3 py-2 text-sm text-ink focus:border-primary-500 focus:outline-none"
           >
             <option value="">All cities</option>
             {locations.map((loc) => (
@@ -54,7 +54,7 @@ export default function SearchFilters({ filters, onChange, locations }) {
             value={minPrice}
             onChange={(e) => update({ minPrice: e.target.value })}
             placeholder="0"
-            className="rounded-lg border border-ink/15 bg-paper px-3 py-2 text-sm text-ink placeholder:text-ink/40 focus:border-pine-500 focus:outline-none"
+            className="rounded-lg border border-ink/15 bg-paper px-3 py-2 text-sm text-ink placeholder:text-ink/40 focus:border-primary-500 focus:outline-none"
           />
         </label>
 
@@ -68,7 +68,7 @@ export default function SearchFilters({ filters, onChange, locations }) {
             value={maxPrice}
             onChange={(e) => update({ maxPrice: e.target.value })}
             placeholder="10000"
-            className="rounded-lg border border-ink/15 bg-paper px-3 py-2 text-sm text-ink placeholder:text-ink/40 focus:border-pine-500 focus:outline-none"
+            className="rounded-lg border border-ink/15 bg-paper px-3 py-2 text-sm text-ink placeholder:text-ink/40 focus:border-primary-500 focus:outline-none"
           />
         </label>
 
@@ -79,7 +79,7 @@ export default function SearchFilters({ filters, onChange, locations }) {
           <select
             value={sort}
             onChange={(e) => update({ sort: e.target.value })}
-            className="rounded-lg border border-ink/15 bg-paper px-3 py-2 text-sm text-ink focus:border-pine-500 focus:outline-none"
+            className="rounded-lg border border-ink/15 bg-paper px-3 py-2 text-sm text-ink focus:border-primary-500 focus:outline-none"
           >
             {SORT_OPTIONS.map((opt) => (
               <option key={opt.value} value={opt.value}>
@@ -101,8 +101,8 @@ export default function SearchFilters({ filters, onChange, locations }) {
             onClick={() => update({ minRating: r })}
             className={`rounded-full px-3 py-1 font-mono text-xs transition ${
               minRating === r
-                ? 'bg-pine-500 text-paper'
-                : 'bg-paper text-ink/60 hover:bg-pine-50'
+                ? 'bg-primary-500 text-paper'
+                : 'bg-paper text-ink/60 hover:bg-primary-50'
             }`}
           >
             {r === 0 ? 'Any' : `${r}+`}

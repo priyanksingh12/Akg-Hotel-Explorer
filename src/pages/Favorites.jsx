@@ -13,7 +13,7 @@ export default function Favorites() {
 
   return (
     <div className="mx-auto max-w-6xl px-5 py-10 sm:px-8">
-      <p className="font-mono text-xs uppercase tracking-widest text-pine-600">Saved stays</p>
+      <p className="font-mono text-xs uppercase tracking-widest text-primary-600">Saved stays</p>
       <h1 className="mt-2 font-display text-3xl font-semibold text-ink sm:text-4xl">
         Your shortlist
       </h1>
@@ -31,7 +31,7 @@ export default function Favorites() {
             action={
               <Link
                 to="/"
-                className="rounded-full bg-ink px-5 py-2 font-mono text-xs uppercase tracking-widest text-paper transition hover:bg-pine-600"
+                className="rounded-full bg-ink px-5 py-2 font-mono text-xs uppercase tracking-widest text-paper transition hover:bg-primary-600"
               >
                 Explore stays
               </Link>

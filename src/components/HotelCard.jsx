@@ -13,7 +13,7 @@ export default function HotelCard({ hotel }) {
   return (
     <Link
       to={`/hotels/${id}`}
-      className="group flex overflow-hidden rounded-2xl bg-white shadow-ticket transition hover:-translate-y-0.5 hover:shadow-lg"
+      className="group flex overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-ink/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:ring-ink/10"
     >
       <div className="relative w-36 shrink-0 sm:w-48">
         <img
@@ -29,7 +29,7 @@ export default function HotelCard({ hotel }) {
 
       <div className="flex flex-1 flex-col justify-between gap-3 p-4 sm:p-5">
         <div>
-          <p className="font-mono text-[11px] uppercase tracking-widest text-pine-500">
+          <p className="font-mono text-[11px] uppercase tracking-widest text-primary-500">
             {location}
           </p>
           <h3 className="mt-1 font-display text-lg font-semibold leading-snug text-ink sm:text-xl">

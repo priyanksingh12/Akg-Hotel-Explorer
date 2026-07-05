@@ -9,7 +9,7 @@ export default function Footer() {
             href="https://demohotelsapi.pythonanywhere.com/"
             target="_blank"
             rel="noreferrer"
-            className="underline hover:text-pine-500"
+            className="underline hover:text-primary-500"
           >
             Hotel Search API
           </a>

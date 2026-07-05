@@ -12,7 +12,7 @@ export function ErrorState({ message, onRetry }) {
         <button
           type="button"
           onClick={onRetry}
-          className="rounded-full bg-ink px-5 py-2 font-mono text-xs uppercase tracking-widest text-paper transition hover:bg-pine-600"
+          className="rounded-full bg-ink px-5 py-2 font-mono text-xs uppercase tracking-widest text-paper transition hover:bg-primary-600"
         >
           Try again
         </button>

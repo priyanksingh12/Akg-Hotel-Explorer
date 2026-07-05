@@ -2,19 +2,19 @@ import { NavLink } from 'react-router-dom';
 import { useFavorites } from '../context/FavoritesContext';
 
 const linkBase =
-  'font-mono text-xs uppercase tracking-widest transition-colors hover:text-pine-500';
+  'font-mono text-xs uppercase tracking-widest transition-colors hover:text-primary-500';
 
 export default function Navbar() {
   const { count } = useFavorites();
 
   return (
-    <header className="sticky top-0 z-40 border-b border-ink/10 bg-paper/95 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-ink/5 bg-paper/80 backdrop-blur-xl shadow-sm transition-all duration-300">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
         <NavLink to="/" className="flex items-center gap-2">
           <span className="font-display text-2xl font-semibold tracking-tight text-ink">
             Waypoint
           </span>
-          <span className="hidden font-mono text-[10px] uppercase tracking-widest text-pine-500 sm:inline">
+          <span className="hidden font-mono text-[10px] uppercase tracking-widest text-primary-500 sm:inline">
             Stays · India
           </span>
         </NavLink>
@@ -23,7 +23,7 @@ export default function Navbar() {
           <NavLink
             to="/"
             className={({ isActive }) =>
-              `${linkBase} ${isActive ? 'text-pine-500' : 'text-ink/70'}`
+              `${linkBase} ${isActive ? 'text-primary-500' : 'text-ink/70'}`
             }
           >
             Explore
@@ -31,7 +31,7 @@ export default function Navbar() {
           <NavLink
             to="/saved"
             className={({ isActive }) =>
-              `${linkBase} ${isActive ? 'text-pine-500' : 'text-ink/70'}`
+              `${linkBase} ${isActive ? 'text-primary-500' : 'text-ink/70'}`
             }
           >
             Saved{count > 0 ? ` (${count})` : ''}

@@ -60,15 +60,16 @@ export default function Home() {
 
   return (
     <div>
-      <section className="border-b border-ink/10 bg-gradient-to-b from-pine-50 to-paper">
-        <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
-          <p className="font-mono text-xs uppercase tracking-widest text-pine-600">
+      <section className="relative overflow-hidden border-b border-ink/10 bg-gradient-to-br from-primary-50 via-paper to-primary-100/50 pb-28 sm:pb-32">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5 mix-blend-overlay"></div>
+        <div className="relative mx-auto max-w-6xl px-5 pt-20 pb-10 sm:px-8 sm:pt-28 sm:pb-14">
+          <p className="font-mono text-xs uppercase tracking-widest text-primary-600">
             {hotels.length > 0 ? `${hotels.length} stays across India` : 'Hotel explorer'}
           </p>
-          <h1 className="mt-3 max-w-2xl font-display text-4xl font-semibold leading-tight text-ink sm:text-5xl">
-            Find a room worth <span className="italic text-pine-500">the detour.</span>
+          <h1 className="mt-4 max-w-3xl font-display text-5xl font-bold leading-tight tracking-tight text-ink sm:text-7xl">
+            Find a room worth <br/><span className="bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent italic">the detour.</span>
           </h1>
-          <p className="mt-4 max-w-lg text-ink/60">
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink/70">
             Browse real-time listings by city, price and rating &mdash; every card here is a
             boarding pass to somewhere new.
           </p>
@@ -76,7 +77,7 @@ export default function Home() {
       </section>
 
       <main className="mx-auto max-w-6xl px-5 py-10 sm:px-8">
-        <div className="-mt-24 mb-8">
+        <div className="relative z-10 -mt-24 mb-8">
           <SearchFilters filters={filters} onChange={handleFiltersChange} locations={locations} />
         </div>
 
@@ -92,7 +93,7 @@ export default function Home() {
               <button
                 type="button"
                 onClick={() => handleFiltersChange(DEFAULT_FILTERS)}
-                className="rounded-full bg-ink px-5 py-2 font-mono text-xs uppercase tracking-widest text-paper transition hover:bg-pine-600"
+                className="rounded-full bg-ink px-5 py-2 font-mono text-xs uppercase tracking-widest text-paper transition hover:bg-primary-600"
               >
                 Reset filters
               </button>
